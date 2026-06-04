@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabSystem();
   initKandunganBars();
   initSmoothScroll();
+  initFloatingWAVisibility();
 });
 
 /* ============================================================
@@ -292,25 +293,55 @@ function initSmoothScroll() {
 }
 
 /* ============================================================
-   FLOATING WA BUTTON – hide on scroll up near top, show after 300px
+   FLOATING WA VISIBILITY (Mobile)
+   ============================================================ */
+function initFloatingWAVisibility() {
+  const floatingWA = document.getElementById('floatingWA');
+  const footer = document.querySelector('footer');
+  if (!floatingWA || !footer) return;
+
+  const mobileMax = 768;
+  let observer = null;
+  let resizeTimer;
+
+  const setupObserver = () => {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
+
+    const isMobile = window.innerWidth <= mobileMax;
+    if (!isMobile) {
+      floatingWA.classList.remove('floating-wa--hidden');
+      return;
+    }
+
+    observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry && entry.isIntersecting) {
+        floatingWA.classList.add('floating-wa--hidden');
+      } else {
+        floatingWA.classList.remove('floating-wa--hidden');
+      }
+    }, { threshold: 0.15 });
+
+    observer.observe(footer);
+  };
+
+  setupObserver();
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setupObserver, 150);
+  }, { passive: true });
+}
+
+/* ============================================================
+   FLOATING WA BUTTON
    ============================================================ */
 (function () {
   const floatingWA = document.getElementById('floatingWA');
   if (!floatingWA) return;
-  let lastY = 0;
-  window.addEventListener('scroll', () => {
-    const currentY = window.scrollY;
-    if (currentY > 300) {
-      floatingWA.style.opacity = '1';
-      floatingWA.style.pointerEvents = 'all';
-    } else {
-      floatingWA.style.opacity = '0';
-      floatingWA.style.pointerEvents = 'none';
-    }
-    lastY = currentY;
-  }, { passive: true });
-  // Initial state
-  floatingWA.style.opacity = '0';
-  floatingWA.style.pointerEvents = 'none';
-  floatingWA.style.transition = 'opacity 0.4s ease, max-width 0.4s ease, box-shadow 0.3s ease, transform 0.3s ease';
+  floatingWA.style.opacity = '1';
+  floatingWA.style.pointerEvents = 'all';
 })();
