@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ayfa.dekatlokal.com/sitemap.xml
+Sitemap: https://eyfa.dekatlokal.com/sitemap.xml

@@ -9,22 +9,22 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Eyfa Natural Oil" />
   <meta name="theme-color" content="#1a4a2e" />
-  <link rel="canonical" href="https://ayfa.dekatlokal.com/" />
+  <link rel="canonical" href="https://eyfa.dekatlokal.com/" />
   <meta property="og:locale" content="id_ID" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Eyfa Natural Oil" />
   <meta property="og:title" content="Eyfa Natural Oil - Minyak Kemiri Murni" />
-  <meta property="og:description" content="Minyak kemiri murni dari biji kemiri pilihan untuk perawatan rambut dan kulit alami seluruh keluarga." />
-  <meta property="og:url" content="https://ayfa.dekatlokal.com/" />
-  <meta property="og:image" content="https://ayfa.dekatlokal.com/assets/eyfa_hero_product.png" />
-  <meta property="og:image:alt" content="Produk Eyfa Natural Oil minyak kemiri murni" />
+  <meta property="og:description" content="Minyak kemiri alami EYFA dalam 3 varian untuk perawatan rambut dan kulit seluruh keluarga." />
+  <meta property="og:url" content="https://eyfa.dekatlokal.com/" />
+  <meta property="og:image" content="https://eyfa.dekatlokal.com/assets/flyer-3-varian.jpg" />
+  <meta property="og:image:alt" content="3 varian produk Eyfa Natural Oil minyak kemiri" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Eyfa Natural Oil - Minyak Kemiri Murni" />
-  <meta name="twitter:description" content="Perawatan rambut dan kulit alami dari minyak kemiri murni tanpa bahan kimia tambahan." />
-  <meta name="twitter:image" content="https://ayfa.dekatlokal.com/assets/eyfa_hero_product.png" />
+  <meta name="twitter:description" content="Perawatan rambut dan kulit alami dari minyak kemiri EYFA dalam 3 varian tanpa bahan kimia tambahan." />
+  <meta name="twitter:image" content="https://eyfa.dekatlokal.com/assets/flyer-3-varian.jpg" />
   <link rel="icon" type="image/jpeg" href="assets/logo-eyfa.jpg" />
   <link rel="apple-touch-icon" href="assets/logo-eyfa.jpg" />
-  <link rel="preload" as="image" href="assets/eyfa_hero_product.png" />
+  <link rel="preload" as="image" href="assets/flyer-3-varian.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -35,10 +35,10 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://ayfa.dekatlokal.com/#organization",
+        "@id": "https://eyfa.dekatlokal.com/#organization",
         "name": "Eyfa Natural Oil",
-        "url": "https://ayfa.dekatlokal.com/",
-        "logo": "https://ayfa.dekatlokal.com/assets/logo-eyfa.jpg",
+        "url": "https://eyfa.dekatlokal.com/",
+        "logo": "https://eyfa.dekatlokal.com/assets/logo-eyfa.jpg",
         "sameAs": [
           "https://www.instagram.com/eyfanaturaloil",
           "https://www.tiktok.com/@eyfa.natural.oil",
@@ -47,13 +47,13 @@
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://ayfa.dekatlokal.com/#business",
+        "@id": "https://eyfa.dekatlokal.com/#business",
         "name": "Eyfa Natural Oil",
-        "url": "https://ayfa.dekatlokal.com/",
-        "image": "https://ayfa.dekatlokal.com/assets/eyfa_hero_product.png",
+        "url": "https://eyfa.dekatlokal.com/",
+        "image": "https://eyfa.dekatlokal.com/assets/eyfa_hero_product.png",
         "telephone": "+6287872252079",
         "areaServed": "Indonesia",
-        "brand": { "@id": "https://ayfa.dekatlokal.com/#organization" },
+        "brand": { "@id": "https://eyfa.dekatlokal.com/#organization" },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -65,13 +65,16 @@
       },
       {
         "@type": "Product",
-        "@id": "https://ayfa.dekatlokal.com/#product",
+        "@id": "https://eyfa.dekatlokal.com/#product",
         "name": "Eyfa Natural Oil Minyak Kemiri Murni",
-        "brand": { "@id": "https://ayfa.dekatlokal.com/#organization" },
+        "brand": { "@id": "https://eyfa.dekatlokal.com/#organization" },
         "category": "Perawatan rambut dan kulit alami",
         "image": [
-          "https://ayfa.dekatlokal.com/assets/eyfa_hero_product.png",
-          "https://ayfa.dekatlokal.com/assets/eyfa_kemiri_natural.png"
+          "https://eyfa.dekatlokal.com/assets/flyer-3-varian.jpg",
+          "https://eyfa.dekatlokal.com/assets/produk-kemiri-murni.jpg",
+          "https://eyfa.dekatlokal.com/assets/produk-kemiri-bakar.jpg",
+          "https://eyfa.dekatlokal.com/assets/produk-kemiri-hitam.jpg",
+          "https://eyfa.dekatlokal.com/assets/eyfa_kemiri_natural.png"
         ],
         "description": "Minyak kemiri murni dari biji kemiri pilihan untuk membantu merawat rambut, kulit kepala, dan kulit keluarga tanpa pewangi sintetis atau pengawet."
       }
@@ -106,24 +109,86 @@
     <symbol id="icon-star" viewBox="0 0 24 24"><polygon points="12 3 14.7 8.5 20.8 9.4 16.4 13.7 17.4 19.8 12 16.9 6.6 19.8 7.6 13.7 3.2 9.4 9.3 8.5 12 3"/></symbol>
   </svg>
 
+  <!-- ===== MARKETPLACE MODAL ===== -->
+  <div class="modal-overlay" id="marketplaceModal" role="dialog" aria-modal="true" aria-label="Pilih platform pemesanan">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Tutup modal">&#x2715;</button>
+      <div class="modal-header">
+        <img src="assets/logo-eyfa.png" alt="Eyfa Natural Oil" class="modal-logo" width="1024" height="1024" />
+        <h3>Pilih Platform Pemesanan</h3>
+        <p>Temukan produk EYFA NATURAL OIL di marketplace favorit Anda.</p>
+      </div>
+      <div class="modal-platforms">
+        <a href="https://wa.me/6287872252079?text=Halo%20Eyfa%2C%20saya%20ingin%20memesan%20Minyak%20Kemiri" class="platform-btn platform-wa" target="_blank" rel="noopener">
+          <span class="platform-icon" aria-hidden="true">WA</span>
+          <span>WhatsApp</span>
+          <small>Chat Langsung</small>
+        </a>
+        <a href="https://shopee.co.id/yfzvd68jae?entryPoint=ShopBySearch&searchKeyword=eyfa" class="platform-btn platform-shopee" target="_blank" rel="noopener">
+          <span class="platform-icon" aria-hidden="true">SP</span>
+          <span>Shopee</span>
+          <small>Eyfa Natural Oil</small>
+        </a>
+        <a href="https://vt.tokopedia.com/t/ZS92H3LvSGbYQ-3wtig/" class="platform-btn platform-tiktok" target="_blank" rel="noopener">
+          <span class="platform-icon" aria-hidden="true">TS</span>
+          <span>TikTok Shop</span>
+          <small>Galeri EYFA</small>
+        </a>
+      </div>
+      <p class="modal-note">Harga terbaik dan promo ongkir tersedia di platform pilihan.</p>
+    </div>
+  </div>
+
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo" aria-label="Eyfa Natural Oil">
-        <img src="assets/logo-eyfa-transparent.png" alt="Eyfa Natural Oil" class="brand-logo-img" width="571" height="653" />
+        <img src="assets/logo-eyfa.png" alt="Eyfa Natural Oil" class="brand-logo-img" width="1024" height="1024" />
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#tentang">Tentang</a></li>
+        <li class="nav-dropdown-wrap">
+          <button class="nav-dropdown-toggle" id="produkToggle" aria-expanded="false" aria-haspopup="true">
+            <span class="nav-dropdown-label">Produk</span>
+            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="produkMenu" role="menu">
+            <a href="#produk-murni" class="dropdown-item" role="menuitem">
+              <span class="di-icon di-original" aria-hidden="true"></span>
+              <div>
+                <strong>Minyak Kemiri Murni</strong>
+                <small>Original &middot; 100% Murni</small>
+              </div>
+            </a>
+            <a href="#produk-bakar" class="dropdown-item" role="menuitem">
+              <span class="di-icon di-bakar" aria-hidden="true"></span>
+              <div>
+                <strong>Minyak Kemiri Bakar</strong>
+                <small>Nutrisi Maksimal &middot; Cold Pressed</small>
+              </div>
+            </a>
+            <a href="#produk-hitam" class="dropdown-item" role="menuitem">
+              <span class="di-icon di-hitam" aria-hidden="true"></span>
+              <div>
+                <strong>Minyak Kemiri Hitam</strong>
+                <small>Perawatan Intensif</small>
+              </div>
+            </a>
+          </div>
+        </li>
         <li><a href="#mitra">Mitra</a></li>
         <li><a href="#kandungan">Kandungan</a></li>
         <li><a href="#manfaat">Manfaat</a></li>
         <li><a href="#cara-pakai">Cara Pakai</a></li>
+        <li><a href="#bts">BTS</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
         <li><a href="#kontak">Kontak</a></li>
         <li class="nav-powered-mobile">Powered by <a href="https://dekatlokal.com/" target="_blank" rel="noopener">DekatLokal</a></li>
       </ul>
-      <a href="https://wa.me/6287872252079?text=Halo%2C%20saya%20ingin%20memesan%20Eyfa%20Minyak%20Kemiri" class="nav-cta" target="_blank" rel="noopener">Pesan Sekarang</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="nav-cta" id="navOrderBtn">Pesan Sekarang</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -131,6 +196,25 @@
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero" id="hero">
+    <div class="hero-video-bg" aria-hidden="true">
+      <div class="hero-vine hero-vine-1"></div>
+      <div class="hero-vine hero-vine-2"></div>
+      <div class="hero-vine hero-vine-3"></div>
+    </div>
+    <div class="hero-particles" aria-hidden="true">
+      <span class="particle p-leaf" style="--x:8%;--delay:0s;--dur:12s;--size:28px"></span>
+      <span class="particle p-leaf" style="--x:18%;--delay:2s;--dur:15s;--size:20px"></span>
+      <span class="particle p-drop" style="--x:28%;--delay:4s;--dur:10s;--size:14px"></span>
+      <span class="particle p-leaf" style="--x:42%;--delay:1s;--dur:18s;--size:24px"></span>
+      <span class="particle p-nut" style="--x:55%;--delay:3s;--dur:14s;--size:18px"></span>
+      <span class="particle p-drop" style="--x:65%;--delay:5s;--dur:11s;--size:12px"></span>
+      <span class="particle p-leaf" style="--x:75%;--delay:0.5s;--dur:16s;--size:22px"></span>
+      <span class="particle p-nut" style="--x:85%;--delay:6s;--dur:13s;--size:16px"></span>
+      <span class="particle p-drop" style="--x:92%;--delay:2.5s;--dur:9s;--size:16px"></span>
+      <span class="particle p-leaf" style="--x:5%;--delay:7s;--dur:17s;--size:18px"></span>
+      <span class="particle p-drop" style="--x:50%;--delay:8s;--dur:12s;--size:10px"></span>
+      <span class="particle p-leaf" style="--x:60%;--delay:9s;--dur:14s;--size:26px"></span>
+    </div>
     <div class="hero-bg-ornament">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
@@ -148,7 +232,7 @@
           <em>Secara Alami</em>
         </h1>
         <p class="hero-subheadline">
-          Minyak Kemiri Murni dari biji kemiri pilihan yang diproses secara higienis tanpa bahan kimia tambahan untuk perawatan rambut dan kulit seluruh keluarga.
+          Minyak Kemiri dari biji kemiri pilihan yang diproses secara higienis tanpa bahan kimia tambahan. Tersedia dalam 3 varian untuk kebutuhan perawatan rambut dan kulit seluruh keluarga.
         </p>
         <div class="hero-stats">
           <div class="stat-item">
@@ -157,25 +241,25 @@
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Varian</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
             <span class="stat-num">0%</span>
             <span class="stat-label">Pengawet</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-num">∞</span>
-            <span class="stat-label">Semua Usia</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-num">✓</span>
+            <span class="stat-num">&check;</span>
             <span class="stat-label">Higienis</span>
           </div>
         </div>
         <div class="hero-cta-group">
-          <a href="https://wa.me/6287872252079?text=Halo%2C%20saya%20ingin%20memesan%20Eyfa%20Minyak%20Kemiri" class="btn btn-primary" id="hero-order-btn" target="_blank" rel="noopener">
+          <button class="btn btn-primary" id="hero-order-btn">
             <svg class="icon" aria-hidden="true"><use href="#icon-package"></use></svg>
             Pesan Sekarang
-          </a>
+          </button>
           <a href="https://wa.me/6287872252079" class="btn btn-whatsapp" id="hero-wa-btn" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             Hubungi WhatsApp
@@ -185,18 +269,18 @@
       <div class="hero-visual" data-aos="fade-left">
         <div class="hero-img-wrapper">
           <div class="hero-img-glow"></div>
-          <img src="assets/eyfa_hero_product.png" alt="Eyfa Natural Oil - Minyak Kemiri Murni" class="hero-product-img" id="hero-product-img" width="1024" height="1024" fetchpriority="high" />
+          <img src="assets/flyer-3-varian.jpg" alt="3 varian Eyfa Minyak Kemiri" class="hero-product-img" id="hero-product-img" width="1080" height="1080" fetchpriority="high" />
           <div class="floating-badge fb-1">
             <span class="fb-icon"><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg></span>
-            <span>100% Murni</span>
+            <span>100% Pure</span>
           </div>
           <div class="floating-badge fb-2">
             <span class="fb-icon"><svg class="icon" aria-hidden="true"><use href="#icon-award"></use></svg></span>
-            <span>Kualitas Terjaga</span>
+            <span>3 Varian</span>
           </div>
           <div class="floating-badge fb-3">
             <span class="fb-icon"><svg class="icon" aria-hidden="true"><use href="#icon-user-check"></use></svg></span>
-            <span>Aman Keluarga</span>
+            <span>Baby Safe</span>
           </div>
         </div>
       </div>
@@ -230,8 +314,101 @@
     </div>
   </section>
 
+  <!-- ===== PRODUK SECTION ===== -->
+  <section class="produk-section" id="produk">
+    <div class="section-texture-overlay produk-texture" aria-hidden="true"></div>
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Varian Produk</div>
+        <h2 class="section-title">3 Varian Minyak Kemiri</h2>
+        <div class="gold-divider center"></div>
+        <p class="section-desc">Pilih varian yang sesuai dengan kebutuhan perawatan rambut dan kulit Anda. Semua dibuat alami, murni, dan tanpa bahan kimia tambahan.</p>
+      </div>
+      <div class="produk-grid">
+        <div class="produk-card" id="produk-murni" data-aos="fade-up" data-aos-delay="0">
+          <div class="produk-badge badge-original">Original &middot; 100% Murni</div>
+          <div class="produk-img-wrap">
+            <img src="assets/produk-kemiri-murni.jpg" alt="Minyak Kemiri Murni EYFA" class="produk-img" loading="lazy" />
+          </div>
+          <div class="produk-info">
+            <h3>Minyak Kemiri Murni</h3>
+            <div class="produk-tag-row">
+              <span class="produk-chip">Natural Ingredients</span>
+              <span class="produk-chip">Traditionally Crafted</span>
+            </div>
+            <p class="produk-desc">Dibuat dari biji kemiri murni pilihan menggunakan resep tradisional yang diproses secara higienis. Memberikan nutrisi alami yang aman untuk rambut dan kulit keluarga.</p>
+            <ul class="produk-manfaat-list">
+              <li>Menyuburkan dan menutrisi rambut</li>
+              <li>Mengurangi ketombe dan kerontokan</li>
+              <li>Menguatkan akar rambut</li>
+              <li>Membantu merawat kulit kering</li>
+            </ul>
+            <div class="produk-size">60 ml &middot; Tanpa Bahan Kimia, Pewangi, dan Pengawet</div>
+            <button class="btn btn-produk-order" data-product="Minyak Kemiri Murni" aria-label="Pesan Minyak Kemiri Murni">Pesan Sekarang</button>
+          </div>
+        </div>
+
+        <div class="produk-card produk-card--featured" id="produk-bakar" data-aos="fade-up" data-aos-delay="100">
+          <div class="produk-badge badge-bakar">Nutrisi Maksimal</div>
+          <div class="produk-img-wrap">
+            <img src="assets/produk-kemiri-bakar.jpg" alt="Minyak Kemiri Bakar EYFA" class="produk-img" loading="lazy" />
+          </div>
+          <div class="produk-info">
+            <h3>Minyak Kemiri Bakar</h3>
+            <div class="produk-tag-row">
+              <span class="produk-chip">Cold Pressed</span>
+              <span class="produk-chip">High Antioxidant</span>
+            </div>
+            <p class="produk-desc">Dibuat dari biji kemiri terbaik melalui proses pembakaran tradisional. Kaya asam esensial, vitamin E, protein, dan antioksidan untuk perawatan lebih intens.</p>
+            <ul class="produk-manfaat-list">
+              <li>Kaya Omega 3, 6, dan 9</li>
+              <li>Membantu pertumbuhan rambut</li>
+              <li>Melindungi rambut dari paparan luar</li>
+              <li>Memberi nutrisi lebih pekat</li>
+            </ul>
+            <div class="produk-size">60 ml &middot; Tanpa Bahan Kimia, Pewangi, dan Pengawet</div>
+            <button class="btn btn-produk-order" data-product="Minyak Kemiri Bakar" aria-label="Pesan Minyak Kemiri Bakar">Pesan Sekarang</button>
+          </div>
+        </div>
+
+        <div class="produk-card" id="produk-hitam" data-aos="fade-up" data-aos-delay="200">
+          <div class="produk-badge badge-hitam">Perawatan Intensif</div>
+          <div class="produk-img-wrap">
+            <img src="assets/produk-kemiri-hitam.jpg" alt="Minyak Kemiri Hitam EYFA" class="produk-img" loading="lazy" />
+          </div>
+          <div class="produk-info">
+            <h3>Minyak Kemiri Hitam</h3>
+            <div class="produk-tag-row">
+              <span class="produk-chip">Natural Ingredients</span>
+              <span class="produk-chip">Deep Treatment</span>
+            </div>
+            <p class="produk-desc">Dibuat dari biji kemiri hitam pilihan yang diproses secara tradisional dan higienis. Warna pekat dan aroma khasnya cocok untuk perawatan rambut lebih fokus.</p>
+            <ul class="produk-manfaat-list">
+              <li>Membantu menghitamkan rambut</li>
+              <li>Menguatkan rambut rapuh</li>
+              <li>Membantu merawat uban alami</li>
+              <li>Cocok untuk perawatan intensif</li>
+            </ul>
+            <div class="produk-size">60 ml &middot; Tanpa Bahan Kimia, Pewangi, dan Pengawet</div>
+            <button class="btn btn-produk-order" data-product="Minyak Kemiri Hitam" aria-label="Pesan Minyak Kemiri Hitam">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="free-bonus" data-aos="fade-up">
+        <div class="bonus-header">FREE Setiap Pembelian</div>
+        <div class="bonus-items">
+          <div class="bonus-item"><span class="bonus-dot" aria-hidden="true"></span><span>Pouch Serbaguna</span></div>
+          <div class="bonus-item"><span class="bonus-dot" aria-hidden="true"></span><span>Hair Cap</span></div>
+          <div class="bonus-item"><span class="bonus-dot" aria-hidden="true"></span><span>Sikat Maskara</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== TENTANG PRODUK ===== -->
   <section class="about" id="tentang">
+    <div class="section-texture-overlay about-texture" aria-hidden="true"></div>
     <div class="section-container">
       <div class="about-grid">
         <div class="about-image-col" data-aos="fade-right">
@@ -278,6 +455,11 @@
   <!-- ===== KANDUNGAN ALAMI ===== -->
   <section class="kandungan" id="kandungan">
     <div class="kandungan-bg"></div>
+    <div class="oil-ripples" aria-hidden="true">
+      <span class="oil-ripple" style="--ox:18%;--oy:28%;--od:0s"></span>
+      <span class="oil-ripple" style="--ox:70%;--oy:38%;--od:1.5s"></span>
+      <span class="oil-ripple" style="--ox:45%;--oy:78%;--od:3s"></span>
+    </div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag light">Kandungan Alami</div>
@@ -340,6 +522,7 @@
 
   <!-- ===== MANFAAT UTAMA ===== -->
   <section class="manfaat" id="manfaat">
+    <div class="section-texture-overlay manfaat-texture" aria-hidden="true"></div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag">Manfaat Utama</div>
@@ -410,7 +593,7 @@
         </div>
         <div class="tab-panel" id="panel-kulit">
           <div class="manfaat-visual" data-aos="fade-right">
-            <img src="assets/eyfa_hero_product.png" alt="Perawatan Kulit dengan Eyfa Natural Oil" class="manfaat-img" width="1024" height="1024" loading="lazy" />
+            <img src="assets/produk-kemiri-murni.jpg" alt="Perawatan Kulit dengan Eyfa Natural Oil" class="manfaat-img" width="1024" height="1024" loading="lazy" />
             <div class="manfaat-img-overlay">
               <span>Kulit Lembut &amp; Bercahaya</span>
             </div>
@@ -453,6 +636,12 @@
   <!-- ===== KEUNGGULAN ===== -->
   <section class="keunggulan" id="keunggulan">
     <div class="keunggulan-bg"></div>
+    <div class="geo-shapes" aria-hidden="true">
+      <span class="geo-circle gc-1"></span>
+      <span class="geo-circle gc-2"></span>
+      <span class="geo-hex gh-1"></span>
+      <span class="geo-hex gh-2"></span>
+    </div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag light">Keunggulan</div>
@@ -486,6 +675,7 @@
 
   <!-- ===== CARA PENGGUNAAN ===== -->
   <section class="cara-pakai" id="cara-pakai">
+    <div class="section-texture-overlay cara-texture" aria-hidden="true"></div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag">Cara Penggunaan</div>
@@ -566,9 +756,86 @@
     </div>
   </section>
 
+  <!-- ===== BEHIND THE SCENES ===== -->
+  <section class="bts-section" id="bts">
+    <div class="bts-bg"></div>
+    <div class="bts-fireflies" aria-hidden="true">
+      <span class="firefly" style="--fx:15%;--fy:30%;--fd:0s"></span>
+      <span class="firefly" style="--fx:70%;--fy:20%;--fd:1s"></span>
+      <span class="firefly" style="--fx:40%;--fy:70%;--fd:2s"></span>
+      <span class="firefly" style="--fx:85%;--fy:55%;--fd:0.5s"></span>
+      <span class="firefly" style="--fx:25%;--fy:80%;--fd:3s"></span>
+      <span class="firefly" style="--fx:60%;--fy:40%;--fd:1.5s"></span>
+    </div>
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag light">Behind The Scenes</div>
+        <h2 class="section-title light">Proses Pembuatan Kami</h2>
+        <div class="gold-divider center"></div>
+        <p class="section-desc light">Lihat bagaimana Eyfa Natural Oil dibuat dari biji kemiri pilihan hingga menjadi produk perawatan alami yang siap digunakan keluarga.</p>
+      </div>
+      <div class="bts-video-wrap" data-aos="fade-up">
+        <div class="bts-video-container" id="btsVideoContainer">
+          <video id="btsVideo" class="bts-local-video" controls preload="metadata" poster="assets/eyfa_kemiri_natural.png">
+            <source src="assets/BTS EYRA (2).mp4" type="video/mp4" />
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+        </div>
+      </div>
+      <div class="bts-highlights">
+        <div class="bts-hl-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="bts-hl-icon"><svg class="icon" aria-hidden="true"><use href="#icon-seed"></use></svg></div>
+          <h4>Pemilihan Biji</h4>
+          <p>Seleksi biji kemiri terbaik untuk menjaga kualitas minyak yang optimal.</p>
+        </div>
+        <div class="bts-hl-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="bts-hl-icon"><svg class="icon" aria-hidden="true"><use href="#icon-factory"></use></svg></div>
+          <h4>Proses Higienis</h4>
+          <p>Resep tradisional dipadukan dengan proses modern yang lebih bersih.</p>
+        </div>
+        <div class="bts-hl-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="bts-hl-icon"><svg class="icon" aria-hidden="true"><use href="#icon-microscope"></use></svg></div>
+          <h4>Quality Control</h4>
+          <p>Setiap batch dicek agar kemurnian dan aroma produk tetap terjaga.</p>
+        </div>
+        <div class="bts-hl-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="bts-hl-icon"><svg class="icon" aria-hidden="true"><use href="#icon-package"></use></svg></div>
+          <h4>Packaging Rapi</h4>
+          <p>Dikemas dengan teliti agar produk aman sampai ke tangan pelanggan.</p>
+        </div>
+      </div>
+      <div class="bts-social-cta" data-aos="fade-up">
+        <p>Tonton lebih banyak konten EYFA di media sosial kami.</p>
+        <div class="bts-social-btns">
+          <a href="https://www.tiktok.com/@eyfa.natural.oil?_r=1&_t=ZS-96tVaxW1fQD" class="bts-social-btn bts-tiktok" target="_blank" rel="noopener">
+            <svg class="bts-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-2.08-2.77V9.4a6.3 6.3 0 1 0 5.53 6.25V8.67a8.18 8.18 0 0 0 4.78 1.52V6.72c-.34 0-.68-.01-1.01-.03Z"/></svg>
+            TikTok
+          </a>
+          <a href="https://www.instagram.com/eyfanaturaloil?igsh=MXFqdnNuOHBqZTM0OQ==" class="bts-social-btn bts-ig" target="_blank" rel="noopener">
+            <svg class="bts-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.67 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.25-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 2.69.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.36-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.69 21.31.27 16.95.07 15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.youtube.com/@eyyanaturaloil" class="bts-social-btn bts-yt" target="_blank" rel="noopener">
+            <svg class="bts-social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+            YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== TESTIMONI ===== -->
   <section class="testimoni" id="testimoni">
     <div class="testi-bg"></div>
+    <div class="testi-dots-bg" aria-hidden="true">
+      <span class="scatter-dot" style="--dx:5%;--dy:15%;--ds:6px;--dd:0s"></span>
+      <span class="scatter-dot" style="--dx:20%;--dy:70%;--ds:4px;--dd:0.8s"></span>
+      <span class="scatter-dot" style="--dx:35%;--dy:25%;--ds:8px;--dd:1.6s"></span>
+      <span class="scatter-dot" style="--dx:55%;--dy:85%;--ds:5px;--dd:2.4s"></span>
+      <span class="scatter-dot" style="--dx:70%;--dy:40%;--ds:7px;--dd:3.2s"></span>
+      <span class="scatter-dot" style="--dx:88%;--dy:15%;--ds:5px;--dd:4s"></span>
+      <span class="scatter-dot" style="--dx:93%;--dy:75%;--ds:6px;--dd:0.4s"></span>
+    </div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag light">Testimoni Pelanggan</div>
@@ -647,6 +914,7 @@
 
   <!-- ===== KONTAK ===== -->
   <section class="kontak" id="kontak">
+    <div class="section-texture-overlay kontak-texture" aria-hidden="true"></div>
     <div class="section-container">
       <div class="section-header" data-aos="fade-up">
         <div class="section-tag">Hubungi Kami</div>
@@ -724,10 +992,15 @@
         <h4>Navigasi</h4>
         <ul>
           <li><a href="#tentang">Tentang Produk</a></li>
+          <li><a href="#produk">Varian Produk</a></li>
+          <li><a href="#produk-murni">Kemiri Murni</a></li>
+          <li><a href="#produk-bakar">Kemiri Bakar</a></li>
+          <li><a href="#produk-hitam">Kemiri Hitam</a></li>
           <li><a href="#mitra">Mitra Kami</a></li>
           <li><a href="#kandungan">Kandungan</a></li>
           <li><a href="#manfaat">Manfaat</a></li>
           <li><a href="#cara-pakai">Cara Penggunaan</a></li>
+          <li><a href="#bts">Behind The Scenes</a></li>
           <li><a href="#testimoni">Testimoni</a></li>
           <li><a href="#kontak">Kontak</a></li>
         </ul>
@@ -747,11 +1020,16 @@
         </div>
       </div>
       <div class="footer-contact-col">
-        <h4>Kontak Langsung</h4>
+        <h4>Kontak &amp; Marketplace</h4>
         <a href="https://wa.me/6287872252079" class="footer-wa-btn" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           Chat 087872252079
         </a>
+        <div class="footer-markets">
+          <a href="https://wa.me/6287872252079" class="fm-btn fm-wa" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://shopee.co.id/eyyanaturaloil" class="fm-btn fm-shopee" target="_blank" rel="noopener">Shopee</a>
+          <a href="https://www.tiktok.com/shop/eyyanaturaloil" class="fm-btn fm-tiktok" target="_blank" rel="noopener">TikTok Shop</a>
+        </div>
         <p class="footer-note">Senin – Sabtu: 08.00 – 21.00 WIB</p>
       </div>
     </div>

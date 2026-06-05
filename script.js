@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initKandunganBars();
   initSmoothScroll();
   initFloatingWAVisibility();
+  initProductDropdown();
+  initMarketplaceModal();
+  initBTSVideo();
 });
 
 /* ============================================================
@@ -73,6 +76,18 @@ function initAOS() {
   const elements = document.querySelectorAll('[data-aos]');
   if (!elements.length) return;
 
+  const revealVisibleElements = () => {
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('aos-animate');
+      }
+    });
+  };
+
+  revealVisibleElements();
+  document.body.classList.add('aos-ready');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -86,6 +101,26 @@ function initAOS() {
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   elements.forEach(el => observer.observe(el));
+
+  let ticking = false;
+  const revealOnViewportChange = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      revealVisibleElements();
+      ticking = false;
+    });
+  };
+
+  requestAnimationFrame(() => {
+    setTimeout(revealVisibleElements, 100);
+    setTimeout(revealVisibleElements, 600);
+    setTimeout(revealVisibleElements, 1200);
+  });
+  window.addEventListener('load', revealVisibleElements, { once: true });
+  window.addEventListener('hashchange', revealVisibleElements);
+  window.addEventListener('scroll', revealOnViewportChange, { passive: true });
+  window.addEventListener('resize', revealOnViewportChange, { passive: true });
 }
 
 /* ============================================================
@@ -334,6 +369,110 @@ function initFloatingWAVisibility() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(setupObserver, 150);
   }, { passive: true });
+}
+
+/* ============================================================
+   PRODUCT DROPDOWN
+   ============================================================ */
+function initProductDropdown() {
+  const toggle = document.getElementById('produkToggle');
+  const menu = document.getElementById('produkMenu');
+  const wrap = toggle ? toggle.closest('.nav-dropdown-wrap') : null;
+  if (!toggle || !menu || !wrap) return;
+
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = wrap.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      wrap.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!wrap.contains(event.target)) {
+      wrap.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      wrap.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+/* ============================================================
+   MARKETPLACE ORDER MODAL
+   ============================================================ */
+function initMarketplaceModal() {
+  const modal = document.getElementById('marketplaceModal');
+  const closeBtn = document.getElementById('modalClose');
+  if (!modal || !closeBtn) return;
+
+  const orderButtons = [
+    document.getElementById('navOrderBtn'),
+    document.getElementById('hero-order-btn'),
+    ...document.querySelectorAll('.btn-produk-order')
+  ].filter(Boolean);
+
+  const waLink = modal.querySelector('.platform-wa');
+  const baseMessage = 'Halo Eyfa, saya ingin memesan Minyak Kemiri';
+
+  const openModal = (event) => {
+    if (event) event.preventDefault();
+    const product = event && event.currentTarget ? event.currentTarget.dataset.product : '';
+    if (waLink) {
+      const message = product ? `Halo Eyfa, saya ingin memesan ${product}` : baseMessage;
+      waLink.href = `https://wa.me/6287872252079?text=${encodeURIComponent(message)}`;
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  orderButtons.forEach(button => {
+    button.addEventListener('click', openModal);
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+}
+
+/* ============================================================
+   BTS VIDEO
+   ============================================================ */
+function initBTSVideo() {
+  const video = document.getElementById('btsVideo');
+  if (!video) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting && !video.paused) {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.08 });
+
+  observer.observe(video);
 }
 
 /* ============================================================
