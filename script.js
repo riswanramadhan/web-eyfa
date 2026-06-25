@@ -423,13 +423,15 @@ function initMarketplaceModal() {
   ].filter(Boolean);
 
   const waLink = modal.querySelector('.platform-wa');
-  const baseMessage = 'Halo Eyfa, saya ingin memesan Minyak Kemiri';
+  const baseMessage = 'Halo Kak, saya dapat info dari website DekatLokal EYFA Natural Oil. Saya ingin bertanya tentang produk dan pemesanan.';
 
   const openModal = (event) => {
     if (event) event.preventDefault();
     const product = event && event.currentTarget ? event.currentTarget.dataset.product : '';
     if (waLink) {
-      const message = product ? `Halo Eyfa, saya ingin memesan ${product}` : baseMessage;
+      const message = product
+        ? `Halo Kak, saya dapat info dari website DekatLokal EYFA Natural Oil. Saya ingin pesan ${product}.`
+        : baseMessage;
       waLink.href = `https://wa.me/6287872252079?text=${encodeURIComponent(message)}`;
     }
     modal.classList.add('open');

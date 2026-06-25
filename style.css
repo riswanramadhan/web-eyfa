@@ -1743,7 +1743,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   object-fit: contain;
   margin: 0 auto 12px;
 }
-.modal-header h3 {
+.modal-header h3,
+.modal-header .modal-title {
   font-size: 1.35rem;
   color: var(--green-dark);
   font-weight: 800;
