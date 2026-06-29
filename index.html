@@ -1184,6 +1184,28 @@
     <span class="floating-wa-pulse" aria-hidden="true"></span>
   </a>
 
+  <!-- ===== BACKSOUND CONTROL ===== -->
+  <audio id="backsound" src="assets/backsound.mpeg" loop preload="metadata"></audio>
+  <button
+    class="backsound-toggle"
+    id="backsoundToggle"
+    type="button"
+    aria-label="Nyalakan backsound"
+    aria-pressed="false"
+    title="Nyalakan backsound"
+  >
+    <svg class="backsound-icon backsound-icon-off" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+      <path d="m16 9 5 5m0-5-5 5" />
+    </svg>
+    <svg class="backsound-icon backsound-icon-on" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+      <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+      <path d="M18 6a8.5 8.5 0 0 1 0 12" />
+    </svg>
+    <span class="backsound-status">Musik mati</span>
+  </button>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductDropdown();
   initMarketplaceModal();
   initBTSVideo();
+  initBacksound();
 });
 
 /* ============================================================
@@ -475,6 +476,51 @@ function initBTSVideo() {
   }, { threshold: 0.08 });
 
   observer.observe(video);
+}
+
+/* ============================================================
+   BACKSOUND CONTROL
+   ============================================================ */
+function initBacksound() {
+  const audio = document.getElementById('backsound');
+  const toggle = document.getElementById('backsoundToggle');
+  const status = toggle ? toggle.querySelector('.backsound-status') : null;
+  if (!audio || !toggle) return;
+
+  audio.volume = 0.35;
+
+  const updateState = (isPlaying) => {
+    const label = isPlaying ? 'Matikan backsound' : 'Nyalakan backsound';
+    toggle.classList.toggle('is-playing', isPlaying);
+    toggle.setAttribute('aria-pressed', String(isPlaying));
+    toggle.setAttribute('aria-label', label);
+    toggle.title = label;
+    if (status) status.textContent = isPlaying ? 'Musik menyala' : 'Musik mati';
+  };
+
+  toggle.addEventListener('click', async () => {
+    if (!audio.paused) {
+      audio.pause();
+      updateState(false);
+      return;
+    }
+
+    try {
+      await audio.play();
+      updateState(true);
+    } catch (error) {
+      updateState(false);
+      console.warn('Backsound tidak dapat diputar:', error);
+    }
+  });
+
+  audio.addEventListener('pause', () => updateState(false));
+  audio.addEventListener('play', () => updateState(true));
+  audio.addEventListener('error', () => {
+    updateState(false);
+    toggle.setAttribute('aria-label', 'Backsound tidak tersedia');
+    toggle.title = 'Backsound tidak tersedia';
+  });
 }
 
 /* ============================================================
